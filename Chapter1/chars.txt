@@ -1,0 +1,3 @@
+I am a list of chars!
+
+How many chars do I have?
