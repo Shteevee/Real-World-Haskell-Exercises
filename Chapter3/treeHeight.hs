@@ -4,14 +4,14 @@ data Tree a = Node a (Tree a) (Tree a)
 
 treeHeight :: Tree a -> Int
 treeHeight Empty = 0
-treeHeight (Node x y z) =
-    if leftHeight > rightHeight then
-        1 + leftHeight
+treeHeight (Node x l r) =
+    if left > right then
+        1 + left
     else
-        1 + rightHeight
+        1 + right
     where
-        leftHeight = treeHeight y
-        rightHeight = treeHeight z
+        left = treeHeight l
+        right = treeHeight r
 
 sampleTree1 :: Tree Integer
 sampleTree1 = Node 1 Empty Empty
